@@ -34,4 +34,11 @@ BackboneRailsApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+
+  # generators config
+  config.generators do |g|
+    g.test_framework = :rspec
+    g.fixture_replacement = :fabrication
+  end
 end
