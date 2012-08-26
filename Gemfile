@@ -21,12 +21,14 @@ gem 'jquery-rails'
 gem 'simple-rails-deploy'
 gem 'unicorn'
 
+gem 'inherited_resources'
+
 group :test, :development do
   gem 'pry'
-end
 
-group :test do
   gem 'fabrication'
+  gem 'ffaker'
+
   gem 'rspec-rails'
   gem 'shoulda'
 

@@ -55,6 +55,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fabrication (2.2.3)
+    ffaker (1.15.0)
     gherkin (2.11.2)
       json (>= 1.4.6)
     highline (1.6.14)
@@ -172,6 +173,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber
   fabrication
+  ffaker
   jquery-rails
   pg
   pry

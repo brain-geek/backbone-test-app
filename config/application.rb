@@ -66,3 +66,5 @@ module BackboneRailsApp
     config.assets.version = '1.0'
   end
 end
+
+ActiveRecord::Base.include_root_in_json = false
