@@ -23,6 +23,8 @@ gem 'unicorn'
 
 gem 'inherited_resources'
 
+gem "rails-backbone"
+
 group :test, :development do
   gem 'pry'
 
@@ -30,7 +32,7 @@ group :test, :development do
   gem 'ffaker'
 
   gem 'rspec-rails'
-  gem 'shoulda'
+  gem 'shoulda', :require => false
 
   gem 'cucumber'
 end
