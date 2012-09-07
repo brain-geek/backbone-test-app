@@ -1,2 +1,2 @@
-class CountriesController < InheritedResources::Base
+class CountriesController < BaseController
 end

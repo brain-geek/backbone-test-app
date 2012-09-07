@@ -1,2 +1,2 @@
-class CampaignsController < InheritedResources::Base
+class CampaignsController < BaseController
 end
