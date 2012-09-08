@@ -1,4 +1,4 @@
-class BackboneRailsApp.Models.Country extends Backbone.Model
+class BackboneRailsApp.Models.Country extends BackboneRailsApp.Models.Base
   paramRoot: 'country'
 
   defaults:

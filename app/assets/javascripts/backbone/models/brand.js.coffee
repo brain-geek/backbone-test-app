@@ -1,4 +1,4 @@
-class BackboneRailsApp.Models.Brand extends Backbone.Model
+class BackboneRailsApp.Models.Brand extends BackboneRailsApp.Models.Base
   paramRoot: 'brand'
 
   defaults:

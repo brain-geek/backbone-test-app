@@ -1,4 +1,4 @@
-class BackboneRailsApp.Models.Campaign extends Backbone.Model
+class BackboneRailsApp.Models.Campaign extends BackboneRailsApp.Models.Base
   paramRoot: 'campaign'
 
   defaults:
