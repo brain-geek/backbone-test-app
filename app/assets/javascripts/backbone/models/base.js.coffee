@@ -1,4 +1,4 @@
-class BackboneRailsApp.Models.Base extends Backbone.Model
+class BackboneRailsApp.Models.Base extends Backbone.GSModel
 
   secureAttributes: [
     'created_at', 'updated_at'

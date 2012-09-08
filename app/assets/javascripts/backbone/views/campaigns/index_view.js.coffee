@@ -11,7 +11,7 @@ class BackboneRailsApp.Views.Campaigns.IndexView extends Backbone.View
 
   addOne: (campaign) =>
     view = new BackboneRailsApp.Views.Campaigns.CampaignView({model : campaign})
-    @$("tbody").append(view.render().el)
+    @$("#campaigns-table > tbody").append(view.render().el)
 
   render: =>
     $(@el).html(@template(campaigns: @options.campaigns.toJSON() ))

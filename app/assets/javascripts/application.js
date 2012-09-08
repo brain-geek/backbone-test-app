@@ -16,5 +16,6 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require backbone-getters-setters
 //= require backbone/backbone_rails_app
 //= require_tree .

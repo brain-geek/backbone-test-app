@@ -1,5 +1,15 @@
 <td><%= title %></td>
-<td><%= lang %></td>
+<td><table>
+<% l = $.parseJSON(lang);
+_.each(Object.keys(l), function(key){
+  %>
+    <tr>
+      <td class="country"><%= key %></td>
+      <td><%= l[key] %></td>
+    </tr>
+  <%
+}); %>
+</table></td>
 
 <td><a href="#/<%= id %>">Show</td>
 <td><a href="#/<%= id %>/edit">Edit</td>
