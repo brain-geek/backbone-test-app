@@ -1,0 +1,15 @@
+<table>
+  <% l = $.parseJSON(lang);
+  _.each(Object.keys(l), function(key){
+    %>
+      <tr>
+        <td class="country"><%= key %></td>
+        <td>
+          <% _.each(l[key], function(lang){ %>
+            <span class="remove" data-country="<%= key %>" data-lang="<%= lang %>"><%= lang %></span>
+          <% }); %>
+        </td>
+      </tr>
+    <%
+  }); %>
+</table>

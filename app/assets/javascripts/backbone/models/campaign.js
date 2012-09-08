@@ -8,7 +8,10 @@ BackboneRailsApp.Models.Campaign = BackboneRailsApp.Models.Base.extend({
 
   setters: {
     lang: function(value) {
-      return $.parseJSON(value);
+      if(typeof(value)=='string')
+        return $.parseJSON(value);
+      else
+        return value;
     }
   },
 
