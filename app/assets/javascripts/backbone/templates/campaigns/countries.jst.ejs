@@ -1,15 +1,20 @@
+<h3>Availible languages:</h3>
 <table>
   <% l = $.parseJSON(lang);
   _.each(Object.keys(l), function(key){
     %>
-      <tr>
-        <td class="country" data-country="<%= key %>"><%= key %></td>
+      <tr data-country="<%= key %>">
+        <td class="country"><%= key %></td>
         <td>
           <% _.each(l[key], function(lang){ %>
-            <span class="language" data-country="<%= key %>" data-lang="<%= lang %>"><%= lang %></span>
+            <span class="language" data-lang="<%= lang %>"><%= lang %></span>
           <% }); %>
+          <input type="text" class="add_language" />
         </td>
       </tr>
     <%
   }); %>
+  <tr>
+    <td colspan="2"><input type="text" id="add_country" /></td>
+  </tr>
 </table>

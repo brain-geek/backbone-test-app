@@ -16,35 +16,51 @@ BackboneRailsApp.Models.Campaign = BackboneRailsApp.Models.Base.extend({
   },
 
   toJSON: function() {
-    a =  this._cloneAttributes();
+    var a =  this._cloneAttributes();
 
     a.lang = JSON.stringify(this.get('lang'))
 
     return a;
   },
 
-  removeCountry: function(country) {
-    languages = this.get('lang')
-
-    delete languages[country]
-
-    this.set({'lang': languages})
+  set_lang: function(lang) {
+    this.set({'lang': lang})
 
     this.trigger('change:lang')
 
     return this
   },
+  
+  add_country: function(country) {
+    var languages = this.get('lang')
 
-  removeLanguage: function(country, language) {
-    languages = this.get('lang')
+    languages[country] = []
+
+    return this.set_lang(languages)
+  },
+
+  add_language: function(country, language) {
+    var languages = this.get('lang')
+
+    languages[country].push(language)
+
+    return this.set_lang(languages)
+  },
+
+  remove_country: function(country) {
+    var languages = this.get('lang')
+
+    delete languages[country]
+
+    return this.set_lang(languages)
+  },
+
+  remove_language: function(country, language) {
+    var languages = this.get('lang')
 
     languages[country].splice(languages[country].indexOf(language), 1)
 
-    this.set({'lang': languages})
-
-    this.trigger('change:lang')
-
-    return this
+    return this.set_lang(languages)
   }
 });
 
