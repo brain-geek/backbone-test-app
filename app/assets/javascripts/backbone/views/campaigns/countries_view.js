@@ -8,7 +8,7 @@ BackboneRailsApp.Views.Campaigns.CountriesView = Backbone.View.extend({
 
   initialize: function() {
     _.bindAll(this, 'render');
-    this.model.bind('change:lang_changed', this.render);
+    this.model.bind('change:lang', this.render);
   },
 
   render: function() {
@@ -17,28 +17,13 @@ BackboneRailsApp.Views.Campaigns.CountriesView = Backbone.View.extend({
   },
 
   remove_language: function(event) {
-    country = $(event.target).data('country')
-    language =  $(event.target).data('lang')
-
-    languages = this.model.get('lang')
-
-    languages[country].splice(languages[country].indexOf(language), 1)
-
-    //Additional parameter is used because setter plugin does not trigger 'field change' event in backbone
-    this.model.set({'lang': languages, 'lang_changed': (new Date().getTime())})
+    this.model.removeLanguage($(event.target).data('country'), $(event.target).data('lang'))
 
     return this;
   },
 
   remove_country: function(event) {
-    country = $(event.target).data('country')
-
-    languages = this.model.get('lang')
-
-    delete languages[country]
-
-    //Additional parameter is used because setter plugin does not trigger 'field change' event in backbone
-    this.model.set({'lang': languages, 'lang_changed': (new Date().getTime())})
+    this.model.removeCountry($(event.target).data('country'))
 
     return this;
   }

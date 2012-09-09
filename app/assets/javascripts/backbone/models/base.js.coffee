@@ -1,7 +1,7 @@
 class BackboneRailsApp.Models.Base extends Backbone.GSModel
 
   secureAttributes: [
-    'created_at', 'updated_at', 'lang_changed'
+    'created_at', 'updated_at'
   ]
 
   toJSON: ->
