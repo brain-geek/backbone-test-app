@@ -3,5 +3,5 @@ BackboneRailsApp::Application.routes.draw do
   resources :campaigns
   resources :brands
 
-  root :to => redirect('/brands')
+  root :to => redirect('/campaigns')
 end
