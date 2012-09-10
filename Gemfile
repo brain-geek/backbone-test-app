@@ -35,4 +35,7 @@ group :test, :development do
   gem 'shoulda', :require => false
 
   gem 'cucumber'
+  gem 'cucumber-rails'
+
+  gem 'database_cleaner'
 end
