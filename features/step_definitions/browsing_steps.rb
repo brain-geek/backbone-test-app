@@ -14,15 +14,3 @@ end
 Then /^I call debugger$/ do
   binding.pry
 end
-
-Then /^I should not see "(.*?)" in the "(.*?)"$/ do |text, selector|
-  within selector do
-    has_no_content? text
-  end
-end
-
-Then /^I should see "(.*?)" in the "(.*?)"$/ do |text, selector|
-  within selector do
-    has_content? text
-  end
-end
