@@ -37,5 +37,7 @@ group :test, :development do
   gem 'cucumber'
   gem 'cucumber-rails'
 
+  gem 'cucumber-websteps'
+
   gem 'database_cleaner'
 end
